@@ -57,7 +57,7 @@ export const content = {
   },
   aboutme: {
     title: "About Me",
-    bio: "Hello! I'm Saif Alramahi, an experienced Data Engineer with three years of specialized expertise in cloud engineering. I have developed a strong proficiency in Microsoft Azure services, alongside advanced skills in Python and SQL. My career has been defined by a commitment to delivering high-quality, scalable data solutions within enterprise environments.",
+    bio: "Hello! I'm Saif Alramahi, an experienced Data Consultant with three years of specialized expertise in cloud development and data engineering. I have developed a strong proficiency in Microsoft Azure services, alongside advanced skills in Python and SQL. My career has been defined by a commitment to delivering high-quality, scalable data solutions within enterprise environments.",
     skills_title: "My Skills",
     skills_content: [
       {
