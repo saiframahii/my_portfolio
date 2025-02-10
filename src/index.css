@@ -1,11 +1,7 @@
-/* Inria serif */
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
-/* Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Paprika */
-@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
-/* Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import font families */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,57 +10,87 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply text-gray-900;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span {
-    @apply text-dark_primary;
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-gray-900;
   }
+
   h1 {
-    @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
+
   h2 {
-    @apply font-Poppins text-5xl font-bold;
+    @apply text-3xl md:text-4xl font-bold;
   }
+
   h3 {
-    @apply font-Poppins text-5xl;
+    @apply text-2xl md:text-3xl font-semibold;
   }
+
   h4 {
-    @apply md:text-4xl text-3xl !leading-relaxed font-Poppins;
-  }
-  h6 {
-    @apply font-Poppins font-bold text-[#253D57] leading-8;
+    @apply text-xl md:text-2xl font-semibold;
   }
 
   p {
-    @apply font-Poppins text-[0.95rem];
+    @apply font-sans text-base text-gray-700 leading-relaxed;
   }
-  button {
-    @apply font-Poppins;
-  }
-  input,
-  textarea {
-    @apply bg-transparent outline-none font-Poppins;
+
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors;
   }
 }
 
-@layer utilities {
+@layer components {
   .btn {
-    @apply py-2 px-9 border-2 rounded-md
-     border-dark_primary rounded-br-3xl font-medium;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+           font-semibold text-sm transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
-  .title {
-    @apply md:text-3xl text-2xl;
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 
+           focus:ring-primary-500;
   }
-  .subtitle {
-    @apply text-gray;
+  
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600
+           hover:bg-primary-50 focus:ring-primary-500;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-white/20
+           hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
   }
 }
-.swiper-pagination-bullet {
-  @apply w-3 h-3 bg-dark_primary;
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Timeline customization */
+.vertical-timeline::before {
+  @apply bg-primary-200;
+}
+
+.vertical-timeline-element-content {
+  @apply glass-panel shadow-sm !important;
+}
+
+/* Navbar animations */
+.nav-scroll {
+  @apply backdrop-blur-md bg-white/80 border-b border-white/20;
 }

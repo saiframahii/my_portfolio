@@ -53,6 +53,10 @@ export const content = {
         count: "3+",
         text: "Years of Experience in Data Engineering",
       },
+      {
+        count: "MSc",
+        text: "in Renewable & Sustainable Energy Technologies",
+      },
     ],
   },
   aboutme: {
@@ -94,7 +98,7 @@ export const content = {
     icon: MdArrowForward,
   },
   timeline: {
-    title: "My Journey",
+    title: "Timeline",
     events: [
       {
         type: "education",
