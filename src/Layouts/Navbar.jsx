@@ -20,9 +20,9 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'nav-scroll' : ''}`}>
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#home" className="text-xl font-heading font-bold text-gray-900">
+      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'nav-scroll' : 'bg-white/50 backdrop-blur-sm'}`}>
+        <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">
+          <a href="#home" className="text-lg md:text-xl font-heading font-bold text-gray-900">
             Saif Alramahi
           </a>
           <nav className="hidden md:flex items-center space-x-8">
@@ -44,7 +44,7 @@ const Navbar = () => {
             className="md:hidden p-2 rounded-lg hover:bg-white/50 backdrop-blur-sm transition-colors"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <HiMenuAlt2 size={24} />
+            <HiMenuAlt2 size={20} />
           </button>
         </div>
       </header>

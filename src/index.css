@@ -92,5 +92,16 @@
 
 /* Navbar animations */
 .nav-scroll {
-  @apply backdrop-blur-md bg-white/80 border-b border-white/20;
+  @apply bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm;
+}
+
+/* Adjust content padding to prevent header overlap */
+section {
+  scroll-margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 3.5rem;
+  }
 }

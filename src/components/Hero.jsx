@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import { content } from "../Content";
 
 const StatBox = ({ title, subtitle }) => (
-  <div className="glass-panel rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 w-full min-w-[280px] max-w-sm">
+  <div 
+    className="glass-panel rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 w-full min-w-[280px] max-w-sm"
+    data-aos="zoom-in"
+  >
     <div className="flex items-center gap-4">
       <span className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
         {title}
@@ -32,6 +35,8 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
                 className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent"
+                data-aos="fade-right"
+                data-aos-delay="200"
               >
                 {hero.firstName} {hero.LastName}
               </motion.h1>
@@ -40,6 +45,8 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
                 className="text-2xl md:text-3xl text-primary-600 font-heading"
+                data-aos="fade-right"
+                data-aos-delay="400"
               >
                 {hero.title}
               </motion.h2>
@@ -62,6 +69,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center"
+              data-aos="fade-up"
+              data-aos-delay="800"
             >
               <a 
                 href="#contact" 
@@ -98,6 +107,8 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative order-first md:order-last"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
           >
             <div className="absolute inset-0 bg-gradient-primary from-primary-100/30 to-transparent rounded-3xl transform rotate-6" />
             <img

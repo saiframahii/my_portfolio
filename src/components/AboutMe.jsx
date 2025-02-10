@@ -4,38 +4,25 @@ import { content } from "../Content";
 const AboutMe = () => {
   const { aboutme } = content;
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <section id="aboutme" className="section">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div 
+          data-aos="fade-up"
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="mb-4">{aboutme.title}</h2>
           <p className="text-lg text-gray-600">{aboutme.bio}</p>
-        </motion.div>
+        </div>
 
         <div className="mt-16">
-          <h3 className="text-center mb-8">{aboutme.skills_title}</h3>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+          <h3 className="text-center mb-8" data-aos="fade-up">{aboutme.skills_title}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {aboutme.skills_content.map((skill, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={cardVariants}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="card p-6 group hover:border-primary-200"
               >
                 <div className="flex items-center gap-4">
@@ -51,9 +38,9 @@ const AboutMe = () => {
                     <p className="text-sm text-gray-600 mt-1">{skill.para}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

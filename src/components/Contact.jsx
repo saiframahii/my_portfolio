@@ -16,7 +16,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="mb-8">{Contact.title}</h2>
+          <h2 className="mb-8" data-aos="fade-down">{Contact.title}</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {Contact.social_media.map((content, i) => (
@@ -25,6 +25,8 @@ const Contact = () => {
                 href={content.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-aos="zoom-in"
+                data-aos-delay={i * 200}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
